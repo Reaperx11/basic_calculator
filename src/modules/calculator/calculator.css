@@ -1,0 +1,62 @@
+h1{
+    color: white;
+}
+
+.container {
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border-color: black;
+    border: solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#262729;
+}
+
+.buttons_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+.screen_container{
+    
+    height: 25%;
+    width: 85%;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(212, 201, 201);
+}
+
+.screen_area{
+    width: 92%;
+    resize: none; 
+    height: 40%;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+.screen_result{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.screen_result_span{
+    text-align: right;
+}
