@@ -33,10 +33,12 @@ const Calculator = () =>{
 
             if(specialCharacters.includes(key) || key==='.' || !isNaN(key)){
                 const last =  screenText.charAt(screenText.length-1)
-
+                debugger
                 if(key==="." && validatorArray.length > 0)
                     valid = !validatorArray[validatorArray.length-1].includes('.')
-                else if(last==="0" && !isNaN(key))
+                else if(last==="" && key==="0"  )
+                    valid = false
+                else if(isNaN(last) && key==="0" && last!==".")
                     valid = false
 
                 if(valid)

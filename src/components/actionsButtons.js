@@ -15,7 +15,9 @@ const ActionsButtons = (props) => {
             let frase = screenText;
 
             const last =  screenText.charAt(screenText.length-1)
-            if(last==="0" && !isNaN(key))
+            if(last==="" && key==="0"  )
+                valid = false
+            else if(isNaN(last) && key==="0" && last!==".")
                 valid = false
 
             if(valid)
@@ -31,7 +33,11 @@ const ActionsButtons = (props) => {
 
             if(key==="." && validatorArray.length > 0)
                 valid = !validatorArray[validatorArray.length-1].includes('.')
-            
+            else if(last==="" && key==="0"  )
+                valid = false
+            else if(isNaN(last) && key==="0" && last!==".")
+                valid = false
+
             if(valid)
                 if(specialCharacters.includes(key) && screenText==="" )
                     frase = (screenText)
